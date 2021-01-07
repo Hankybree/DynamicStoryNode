@@ -1,15 +1,6 @@
-import prompt from './services/inputhandler.js'
+import { prompt, promptNumber } from './services/inputhandler.js'
 
-let name
-let age
-
-while (!name || !age) {
-  name = prompt('What\'s your name?')
-  age = prompt('What\'s your age?')
-
-  if (!name || !age) {
-    console.log('Incorrect input. Try again')
-  }
-}
+const name = prompt('What\'s your name?')
+const age = promptNumber('What\'s your age?')
 
 console.log(`Your name is ${name} and you are ${age + 1} years old!`)
